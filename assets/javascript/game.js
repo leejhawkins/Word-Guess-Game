@@ -20,6 +20,7 @@ function changePlaceholder(array){
 
 var blankPlaceholder = changePlaceholder(arrayPlaceholder);
 console.log(blankPlaceholder);
+
 window.onload = function(){
     var secretWordText=document.getElementById("secretword-text");
     secretWordText.textContent = this.blankPlaceholder;
@@ -32,12 +33,22 @@ window.onload = function(){
 document.onkeyup = function(event) {
 
     var userGuess=event.key;
+    var characterIndex;
 
     var userGuessText=document.getElementById("userguess-text");
     var directionsText=document.getElementById("directions-text");
-    
+    var secretWordText=document.getElementById("secretword-text");
 
-    directionsText.textContent = "Choose Again";
+    for (var i=0;i<secretWord.length;i++) {
+        // characterIndex = secretWord.charAt(i);
+        if (userGuess == secretWord.charAt(i)){
+            arrayPlaceholder[i]= userGuess;
+            blankPlaceholder=arrayPlaceholder.join('');
+            secretWordText.textContent = blankPlaceholder;
+        } 
+    }
+    
     userGuessText.textContent = "You chose: "  + userGuess;
+    
    
 }

@@ -4,15 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="assets/javascript/game.js" type="text/javascript"></script>
     <title>Word Guess Game</title>
 </head>
 <body>
-    <div>
-        <p id="directions-text">Press any button to begin</p>
+    <div class="jumbotron">
+        <h1 class="text-center"><p id="secretword-text"></p></h1>
+        <h2 class="text-center"><p id="directions-text">Press any button to begin</p></h2>
         <p id="userguess-text"></p>
-        <p id="secretword-text"></p>
+    
     </div>
+    
+    <div class="container">
+        <div class = "row">
+            <div class= "col">
+                <div class="card">
+                    <div class="card-header">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Wins/Losses</h3>
+                        <p id="losses-text">Losses: 0</p>
+                        <p id="wins-text">Wins: 0</p>
+                    </div>
+                </div>
+            </div>
+            <div class= "col">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">User Guesses</h3>
+                            <p id="guesses-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     
 </body>

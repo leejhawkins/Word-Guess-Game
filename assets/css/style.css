@@ -1,0 +1,11 @@
+.jumbotron {
+    height: 290px;
+}
+.card {
+    width: 50%;
+    float:left;
+    
+}
+.card-header{
+    height:200px;
+}

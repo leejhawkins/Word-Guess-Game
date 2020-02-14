@@ -1,12 +1,23 @@
+body {
+    font-family: 'Sriracha', cursive;
+}
+header {
+    text-align: center;
+    background-color: white;
+    padding: 10px 0 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 .jumbotron {
     height: 290px;
     background-color: #ff0040;
+    clear:both;
     
 }
 
 .jumbotron h1{
     font-size: 100px;
-    color: #f4f812;
+    color: whitesmoke;
 }
 .card {
     width: 33%;
@@ -18,5 +29,5 @@
     background-color: #ff0040;
 }
 .card p{
-    color: #f4f812;
+    color: whitesmoke;
 }

@@ -1,4 +1,10 @@
-var words =["the", "word","say","root","this","that","start","end"];
+var words =["albania", "argentina","algeria","egypt", "canada","algeria","chad","afghanistan","moldova",
+"honduras","guatemala","brazil","france","germany","england","belgium","china","mongolia",
+"thailand","laos","vietnam","indonesia","india","portugal","spain","italy","norway","sweden","finland",
+"iceland","poland","ukraine","latvia","lithuania","estonia","serbia","croatia","austria","switzerland",
+"romania","hungary","luxembourg","leichenstein","netherlands","andorra","albania","tunisia","libya","mali",
+"senegal","tanzania","somalia","ethiopia","sudan","angola","mozambique","iran","iraq","syria","jordan","israel",
+"cyprus","yemen","eritrea","paraguay","uraguay","chile","suriname","guyana","colombia","venezuela","panama"]
 var wins = 0;
 var losses = 0;
 var wrongGuesses = [];
@@ -28,7 +34,7 @@ window.onload = function(){
     var secretWordText=document.getElementById("secretword-text");
     var numberText=document.getElementById("numguesses-text");
     secretWordText.textContent = this.blankPlaceholder;
-    numberText.textContent = 12;
+    numberText.textContent = 10;
 }
 
 
@@ -69,7 +75,7 @@ document.onkeyup = function(event) {
         wrongGuessText.textContent = "";
         userGuessText.textContent = "";
         directionsText.textContent = "Press Any Key";
-        numberText.textContent = 12;
+        numberText.textContent = 10;
     }
 
   
@@ -95,8 +101,8 @@ document.onkeyup = function(event) {
     if (blankPlaceholder===afterGuessPlaceholder  && repeatLetter==false) {
         wrongGuesses.push(userGuess);
         numberGuess=numberGuess+1;
-        numberText.textContent= 12-numberGuess;
-        if (numberGuess > 11) {
+        numberText.textContent= 10-numberGuess;
+        if (numberGuess > 9) {
             loss.play();
             alert("You lose!  The correct word was:   "  + secretWord);
             losses=losses+1;
@@ -106,7 +112,7 @@ document.onkeyup = function(event) {
            
         } else {
             directionsText.textContent = "Choose again";
-            wrongGuessText.textContent = wrongGuesses;
+            wrongGuessText.textContent = "["+ wrongGuesses +"]";
             
 
         }

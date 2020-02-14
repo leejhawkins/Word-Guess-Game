@@ -1,11 +1,22 @@
 .jumbotron {
     height: 290px;
+    background-color: #ff0040;
+    
+}
+
+.jumbotron h1{
+    font-size: 100px;
+    color: #f4f812;
 }
 .card {
-    width: 50%;
+    width: 33%;
     float:left;
     
 }
 .card-header{
     height:200px;
+    background-color: #ff0040;
+}
+.card p{
+    color: #f4f812;
 }

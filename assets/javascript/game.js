@@ -104,11 +104,10 @@ document.onkeyup = function(event) {
         numberText.textContent= 10-numberGuess;
         if (numberGuess > 9) {
             loss.play();
-            alert("You lose!  The correct word was:   "  + secretWord);
             losses=losses+1;
-            directionsText.textContent = "You lose!";
+            directionsText.textContent = "You lose! The correct word was:  " +secretWord;
             lossText.textContent= "Losses:  " + losses;
-            resetVariables();
+            setTimeout(resetVariables,3000);
            
         } else {
             directionsText.textContent = "Choose again";
@@ -121,10 +120,10 @@ document.onkeyup = function(event) {
         wins=wins+1;
         directionsText.textContent = " You win!!!";
         secretWordText.textContent = afterGuessPlaceholder;
-        alert("You win!  The correct word was:   " + secretWord);
+        
         winText.textContent= "Wins: " + wins;
         
-        resetVariables();
+        setTimeout(resetVariables,3000);
 
     } else {
         repeatLetter = false;
